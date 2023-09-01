@@ -1,38 +1,21 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Customizable Statement of Purpose Generator
 
-## Getting Started
+## This form is designed to generate a customized Statement of Purpose for you. After completing this questionnaire and submitting it, you will receive an email with your personalized Statement of Purpose. You can then tailor and adjust it according to your preferences.
 
-First, run the development server:
+## Tech Stack Used:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+* Frontend: The project's frontend is built using React, a popular JavaScript library for building user interfaces. It uses Next.js, a React framework, to handle server-side rendering and routing. The UI is styled using Tailwind CSS, a utility-first CSS framework, which provides responsive and clean designs out of the box.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+* Backend: For the backend API, you are using Node.js, a runtime environment for executing JavaScript code on the server-side. I have also implemented serverless functions using Next.js API Routes to handle form submissions. These serverless functions are used for processing form data and sending emails.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+* Email Sending: To send emails, I have integrated Nodemailer, a popular Node.js library for sending emails, and set it up to work with your Gmail account.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Design Practices:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+* Component-Based UI: The frontend is structured using a component-based architecture, which promotes code reusability and maintainability. Each form field is encapsulated in a separate FormComponent, making it easy to manage.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+* Responsive Design: The use of Tailwind CSS ensures that the UI is responsive, adapting well to various screen sizes and devices.
 
-## Learn More
+* State Management: I am also managing form data and user interactions using React state. The useState hook is used to keep track of form inputs and handle changes.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+* Error Handling: I have implemented error handling for API requests and form submissions, logging errors to the console for debugging.
