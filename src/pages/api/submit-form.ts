@@ -5,9 +5,7 @@ const sendEmail = require("../../utils/sendEmail");
 import { NextApiRequest, NextApiResponse } from "next";
 import { send } from "process";
 
-// Dummy function to generate a mock SOP
 function generateMockSOP(formData: any): string {
-  // Replace this with your logic to generate a mock SOP based on form data
   const mockSOP = `
 Statement of Purpose
     
@@ -68,17 +66,12 @@ export default async function handler(
 ) {
   if (req.method === "POST") {
     try {
-      const formData = req.body; // Get form data from the request body
+      const formData = req.body; 
       const mockSOP = generateMockSOP(formData);
 
-      // Log the mock SOP to the console (simulating the backend)
+
       console.log("Generated SOP:", mockSOP);
-
-      //send email with the SOP
       await sendEmail(formData, mockSOP);
-
-      // You can add code here to send emails, save data to a database, etc.
-
       res.status(200).json({ message: "Form submitted successfully" });
     } catch (error) {
       console.error("Error processing form:", error);

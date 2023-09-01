@@ -2,7 +2,6 @@ const nodemailer = require('nodemailer');
 
 async function sendEmail(formData, sop) {
   try {
-    // Create a Nodemailer transporter
     const transporter = nodemailer.createTransport({
       service: 'gmail', // E.g., 'Gmail'
       auth: {
@@ -11,7 +10,6 @@ async function sendEmail(formData, sop) {
       },
     });
 
-    // Construct the email
     const mailOptions = {
       from: 'EFFIZENT',
       to: formData.email,
@@ -26,7 +24,7 @@ async function sendEmail(formData, sop) {
       attachments: [
         {
           filename: 'sop.txt',
-          content: sop, // Attach the SOP content
+          content: sop, 
         },
       ],
     };

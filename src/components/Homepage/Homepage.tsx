@@ -6,7 +6,7 @@ import animationData from "../../assets/homePageAnimation.json";
 import { useRouter } from 'next/router';
 
 const Homepage = () => {
-  const router = useRouter(); // Initialize the router
+  const router = useRouter(); 
 
 
   const [formData, setFormData] = useState({
@@ -56,7 +56,6 @@ const Homepage = () => {
       if (response.ok) {
         console.log('Form submitted successfully');
         router.push('/FormSubmitted');
-        // You can add further actions or redirection here if needed
       } else {
         console.error('Form submission failed');
         router.push('/Error');
@@ -91,7 +90,7 @@ const Homepage = () => {
                 type="email"
                 placeholder="Email"
                 id="email"
-                defaultValue={formData.email} // Use formData.email or any specific value
+                defaultValue={formData.email} 
                 handleChange={handleChange}
               />
               <FormComponent
@@ -99,7 +98,7 @@ const Homepage = () => {
                 type="text"
                 placeholder="Full Name"
                 id="fullName"
-                defaultValue={formData.fullName} // Use formData.fullName or any specific value
+                defaultValue={formData.fullName} 
                 handleChange={handleChange}
 
               />
@@ -112,7 +111,7 @@ const Homepage = () => {
                 type="text"
                 placeholder="Highest Level of Education"
                 id="educationLevel"
-                defaultValue={formData.educationLevel} // Use formData.educationLevel or any specific value
+                defaultValue={formData.educationLevel} 
                 handleChange={handleChange}
               />
               <FormComponent
@@ -120,7 +119,7 @@ const Homepage = () => {
                 type="text"
                 placeholder="Institute where you completed your highest level of education"
                 id="institute"
-                defaultValue={formData.institute} // Use formData.institute or any specific value
+                defaultValue={formData.institute}
                 handleChange={handleChange}
               />
               <FormComponent
@@ -128,7 +127,7 @@ const Homepage = () => {
                 type="text"
                 placeholder="Field of Study"
                 id="fieldOfStudy"
-                defaultValue={formData.fieldOfStudy} // Use formData.fieldOfStudy or any specific value
+                defaultValue={formData.fieldOfStudy} 
                 handleChange={handleChange}
               />
 
@@ -137,7 +136,7 @@ const Homepage = () => {
                 type="textarea"
                 placeholder="Write 'None' if no work experience. Provide details if yes."
                 id="workExperience"
-                defaultValue={formData.workExperience} // Use formData.workExperience or any specific value
+                defaultValue={formData.workExperience} 
                 handleChange={handleChange}
               />
               <FormComponent
@@ -145,7 +144,7 @@ const Homepage = () => {
                 type="text"
                 placeholder="Admitted Institute in Canada"
                 id="admittedInstitute"
-                defaultValue={formData.admittedInstitute} // Use formData.admittedInstitute or any specific value
+                defaultValue={formData.admittedInstitute} 
                 handleChange={handleChange}
               />
 
@@ -154,7 +153,7 @@ const Homepage = () => {
                 type="text"
                 placeholder="Program of Study in Canada"
                 id="programOfStudy"
-                defaultValue={formData.programOfStudy} // Use formData.programOfStudy or any specific value
+                defaultValue={formData.programOfStudy} 
                 handleChange={handleChange}
               />
 
@@ -163,7 +162,7 @@ const Homepage = () => {
                 type="text"
                 placeholder="Country of Application"
                 id="countryOfApplication"
-                defaultValue={formData.countryOfApplication} // Use formData.countryOfApplication or any specific value
+                defaultValue={formData.countryOfApplication} 
                 handleChange={handleChange}
               />
               <FormComponent
@@ -171,7 +170,7 @@ const Homepage = () => {
                 type="textarea"
                 placeholder="Future Goals"
                 id="futureGoals"
-                defaultValue={formData.futureGoals} // Use formData.futureGoals or any specific value
+                defaultValue={formData.futureGoals} 
                 handleChange={handleChange}
               />
               <FormComponent
@@ -179,7 +178,7 @@ const Homepage = () => {
                 type="number"
                 placeholder="Listening Score"
                 id="listeningScore"
-                defaultValue={formData.listeningScore} // Use formData.listeningScore or any specific value
+                defaultValue={formData.listeningScore} 
                 handleChange={handleChange}
               />
               <FormComponent
@@ -187,7 +186,7 @@ const Homepage = () => {
                 type="number"
                 placeholder="Reading Score"
                 id="readingScore"
-                defaultValue={formData.readingScore} // Use formData.readingScore or any specific value
+                defaultValue={formData.readingScore} 
                 handleChange={handleChange}
               />
               <FormComponent
@@ -195,7 +194,7 @@ const Homepage = () => {
                 type="number"
                 placeholder="Speaking Score"
                 id="speakingScore"
-                defaultValue={formData.speakingScore} // Use formData.speakingScore or any specific value
+                defaultValue={formData.speakingScore} 
                 handleChange={handleChange}
               />
               <FormComponent
@@ -203,7 +202,7 @@ const Homepage = () => {
                 type="number"
                 placeholder="Writing Score"
                 id="writingScore"
-                defaultValue={formData.writingScore} // Use formData.writingScore or any specific value
+                defaultValue={formData.writingScore} 
                 handleChange={handleChange}
               />
               <FormComponent
@@ -211,7 +210,7 @@ const Homepage = () => {
                 type="text"
                 placeholder="Yes or No"
                 id="tuitionPayment"
-                defaultValue={formData.tuitionPayment} // Use formData.tuitionPayment or any specific value
+                defaultValue={formData.tuitionPayment} 
                 handleChange={handleChange}
               />
               <FormComponent
@@ -219,7 +218,7 @@ const Homepage = () => {
                 type="number"
                 placeholder="Tuition Fee Amount"
                 id="tuitionFee"
-                defaultValue={formData.tuitionFee} // Use formData.tuitionFee or any specific value
+                defaultValue={formData.tuitionFee} 
                 handleChange={handleChange}
               />
               <FormComponent
@@ -227,7 +226,7 @@ const Homepage = () => {
                 type="text"
                 placeholder="Yes or No"
                 id="gic"
-                defaultValue={formData.gic} // Use formData.gic or any specific value
+                defaultValue={formData.gic} 
                 handleChange={handleChange}
               />
               <FormComponent
@@ -235,7 +234,7 @@ const Homepage = () => {
                 type="number"
                 placeholder="GIC Amount"
                 id="gicAmount"
-                defaultValue={formData.gicAmount} // Use formData.gicAmount or any specific value
+                defaultValue={formData.gicAmount} 
                 handleChange={handleChange}
               />
               <div className='flex justify-center'>
