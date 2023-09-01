@@ -22,12 +22,13 @@ const FormComponent: React.FC<FormProps> = ({
     const [formValue, setFormValue] = useState<string>(defaultValue);
 
     return (
+
         <div className="py-2">
-            <label htmlFor={id} className="p-2 text-[0.75rem] text-[#181818]">
-                {labelText}
+            <label htmlFor={id} className="p-2 lg:text-[0.8rem] text-[0.68rem] text-purple-600 font-medium">
+                {labelText}*
             </label>
             <input
-                className="text-[0.9rem] block w-full border border-gray-300 px-2 py-1 rounded-md"
+                className="mt-1 lg:text-[0.9rem] text-[0.8rem] block w-full border border-gray-300 p-2  rounded-md "
                 type={type}
                 placeholder={placeholder}
                 id={id}

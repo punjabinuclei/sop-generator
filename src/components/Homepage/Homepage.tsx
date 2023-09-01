@@ -1,7 +1,12 @@
 import React, { useState } from 'react'
 import FormComponent from './components/formComponent'
+import Lottie from 'lottie-react';
+import animationData from "../../assets/homePageAnimation.json";
+
+import { useRouter } from 'next/router';
 
 const Homepage = () => {
+  const router = useRouter(); // Initialize the router
 
 
   const [formData, setFormData] = useState({
@@ -13,7 +18,7 @@ const Homepage = () => {
     fieldOfStudy: '',
     workExperience: '',
     jobDetails: '',
-    admittedInstitute:'',
+    admittedInstitute: '',
     listeningScore: '',
     readingScore: '',
     speakingScore: '',
@@ -50,9 +55,11 @@ const Homepage = () => {
 
       if (response.ok) {
         console.log('Form submitted successfully');
+        router.push('/FormSubmitted');
         // You can add further actions or redirection here if needed
       } else {
         console.error('Form submission failed');
+        router.push('/Error');
       }
     } catch (error) {
       console.error('Error submitting form:', error);
@@ -61,22 +68,26 @@ const Homepage = () => {
 
   return (
     <div className=''>
-      <h1 className='my-[3rem] text-[#383030] font-semibold text-[6rem] text-center'>EFFIZENT</h1>
-      <div className='flex justify-center'>
+      <div className='flex justify-center  my-[3rem]'>
+        <h1 className=' text-purple-900 font-semibold text-[3rem] lg:text-[6rem] text-center'>EFFIZENT</h1>
+        <div className='lg:w-1/12 w-2/12'>
+          <Lottie animationData={animationData} />
+        </div>
+      </div>
+      <div className='flex justify-center lg:mx-[8rem] mx-[1rem]'>
         <div>
-          <div className='w-[70rem] px-[3rem] py-[2rem] bg-blue-100'>
+          <div className=' lg:px-[8rem] lg:py-[2rem] '>
             <div>
-              <h1 className='text-[2.25rem] text-[#0062bc] font-semibold'>Fill form Guidelines</h1>
-              <p className='w-[56rem] text-[1.25rem] font-[#383030] font-medium'>
-                Fill this questionnaire for the student. After submitting, you will receive an email at the email address that you have provided with a Statement of Purpose customized for you. You can use and modify that as per your needs.
+              <p className=' lg:w-[58rem] lg:text-[1.25rem] text-[#383030] font-medium text-[0.7rem]'>
+              This form is designed to generate a customized Statement of Purpose for you. After completing this questionnaire and submitting it, you will receive an email with your personalized Statement of Purpose. You can then tailor and adjust it according to your preferences.
               </p>
             </div>
           </div>
           {/* Form */}
-          <div>
+          <div className='lg:px-[8rem]'>
             <form action="" onSubmit={handleSubmit}>
               <FormComponent
-                labelText="Email*"
+                labelText="Email"
                 type="email"
                 placeholder="Email"
                 id="email"
@@ -84,7 +95,7 @@ const Homepage = () => {
                 handleChange={handleChange}
               />
               <FormComponent
-                labelText="Full Name*"
+                labelText="Full Name"
                 type="text"
                 placeholder="Full Name"
                 id="fullName"
@@ -92,12 +103,12 @@ const Homepage = () => {
                 handleChange={handleChange}
 
               />
-              <FormComponent labelText="Age*" type="number" placeholder="Age" id="age"
+              <FormComponent labelText="Age" type="number" placeholder="Age" id="age"
                 defaultValue={formData.age}
                 handleChange={handleChange}
               />
               <FormComponent
-                labelText="Highest Level of Education*"
+                labelText="Highest Level of Education"
                 type="text"
                 placeholder="Highest Level of Education"
                 id="educationLevel"
@@ -105,7 +116,7 @@ const Homepage = () => {
                 handleChange={handleChange}
               />
               <FormComponent
-                labelText="Institute where you completed your highest level of education*"
+                labelText="Institute where you completed your highest level of education"
                 type="text"
                 placeholder="Institute where you completed your highest level of education"
                 id="institute"
@@ -113,7 +124,7 @@ const Homepage = () => {
                 handleChange={handleChange}
               />
               <FormComponent
-                labelText="Field of Study*"
+                labelText="Field of Study"
                 type="text"
                 placeholder="Field of Study"
                 id="fieldOfStudy"
@@ -228,7 +239,7 @@ const Homepage = () => {
                 handleChange={handleChange}
               />
               <div className='flex justify-center'>
-                <button className="mt-2 mb-10 px-8 py-2 bg-blue-500 text-white rounded-md" type="submit">
+                <button className="mt-2 mb-10 px-8 py-2 bg-purple-700 text-white rounded-md  hover:bg-purple-900 shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px]" type="submit">
                   Generate SOP
                 </button>
               </div>
