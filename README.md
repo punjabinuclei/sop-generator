@@ -4,7 +4,7 @@
 
 ## Tech Stack Used:
 
-* Frontend: The project's frontend is built using React, a popular JavaScript library for building user interfaces. It uses Next.js, a React framework, to handle server-side rendering and routing. The UI is styled using Tailwind CSS, a utility-first CSS framework, which provides responsive and clean designs out of the box.
+* Frontend: It uses Next.js, a React framework, to handle server-side rendering and routing. The UI is styled using Tailwind CSS, a utility-first CSS framework, which provides responsive and clean designs out of the box.
 
 * Backend: For the backend API, you are using Node.js, a runtime environment for executing JavaScript code on the server-side. I have also implemented serverless functions using Next.js API Routes to handle form submissions. These serverless functions are used for processing form data and sending emails.
 
